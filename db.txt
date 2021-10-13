@@ -279,9 +279,8 @@ country BY: DFS-ETSI
 	(5490 - 5710 @ 160), (27), DFS
 
 country BZ: DFS-JP
-	(2402 - 2482 @ 40), (36)
-	(5170 - 5835 @ 80), (36)
-	(57000 - 66000 @ 2160), (44)
+	(2402 - 2482 @ 40), (30)
+	(5735 - 5835 @ 80), (30)
 
 # Source:
 # https://www.ic.gc.ca/eic/site/smt-gst.nsf/vwapj/rss-247-i2-e.pdf/$file/rss-247-i2-e.pdf
@@ -363,9 +362,13 @@ country CR: DFS-FCC
 # Source:
 # https://www.mincom.gob.cu/es/marco-legal
 # - Redes Informáticas
-# Resolución 127- 2011 Reglamento de Banda de frecuencias de 2,4 GHz.
+#    Resolución 98- 2019 Reglamento de Redes Inalámbricas:
+# https://www.mincom.gob.cu/sites/default/files/marcoregulatorio/r_98-19_reglamento_redes_inalambricas.pdf
 country CU: DFS-FCC
 	(2400 - 2483.5 @ 40), (200 mW)
+	(5150 - 5350 @ 80), (200 mW), NO-IR, NO-OUTDOOR
+	(5470 - 5725 @ 80), (250 mW), NO-IR
+	(5725 - 5850 @ 80), (200 mW)
 
 country CX: DFS-FCC
 	(2402 - 2482 @ 40), (20)
@@ -433,6 +436,12 @@ country CZ: DFS-ETSI
 # Bereich 57 GHz - 66 GHz für Funkanwendungen für weitbandige
 # Datenübertragungssysteme; „Multiple Gigabit WAS/RLAN Systems (MGWS)“).
 # https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Frequenzen/Allgemeinzuteilungen/2011_08_MGWS_pdf.pdf
+#
+# Allocation for the WiFi 6E Band (Allgemeinzuteilung von Frequenzen im
+# Bereich 5945 MHz - 6425 MHz für drahtlose Zugangssysteme,
+# einschließlich lokaler Funknetze WAS/WLAN („Wireless Access Systems
+# including Wireless Local Area Networks“))
+# https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Frequenzen/Allgemeinzuteilungen/MobilfunkDectWlanCBFunk/vfg552021WLAN6GHz.pdf
 country DE: DFS-ETSI
 	(2400 - 2483.5 @ 40), (100 mW)
 	(5150 - 5250 @ 80), (200 mW), NO-OUTDOOR, AUTO-BW, wmmrule=ETSI
@@ -440,6 +449,8 @@ country DE: DFS-ETSI
 	(5470 - 5725 @ 160), (500 mW), DFS, wmmrule=ETSI
 	# short range devices (ETSI EN 300 440-1)
 	(5725 - 5875 @ 80), (25 mW)
+	# WiFi 6E
+	(5945 - 6425 @ 160), (200 mW), NO-OUTDOOR, AUTO-BW, wmmrule=ETSI
 	# 60 GHz band channels 1-4 (ETSI EN 302 567)
 	(57000 - 66000 @ 2160), (40)
 
@@ -481,12 +492,14 @@ country DZ: DFS-JP
 	(5250.000 - 5330.000 @ 80.000), (23.00), DFS, AUTO-BW
 	(5490.000 - 5670.000 @ 160.000), (23.00), DFS
 
+# Source:
+# https://www.arcotel.gob.ec/wp-content/uploads/2018/04/NORMA-ESPECTRO-DE-USO-LIBRE-Y-ESPECTRO-PARA-USO-DETERMINADO-EN-BANDAS-LIBRES.pdf
 country EC: DFS-FCC
-	(2402 - 2482 @ 40), (20)
-	(5170 - 5250 @ 20), (17)
-	(5250 - 5330 @ 20), (24), DFS
-	(5490 - 5730 @ 20), (24), DFS
-	(5735 - 5835 @ 20), (30)
+	(2400 - 2483.5 @ 40), (1000 mW)
+	(5150 - 5250 @ 80), (50 mW), AUTO-BW, DFS
+	(5250 - 5350 @ 80), (125 mW), AUTO-BW, DFS
+	(5470 - 5725 @ 160), (125 mW), DFS
+	(5725 - 5850 @ 80), (1000 mW)
 
 # EE as part of EU/CEPT accepted decisions 2005/513/EC (5GHz RLAN, EN 301 893)
 # and 2006/771/EC (amended by 2008/432/EC, Short-Range Devices, EN 300 440)
@@ -505,17 +518,18 @@ country EE: DFS-ETSI
 	# 60 GHz band channels 1-4 (ETSI EN 302 567)
 	(57000 - 66000 @ 2160), (40)
 
+# https://www.tra.gov.eg/en/industry/importing-of-equipment/Pages/Regulations-for-use-of-Wireless-Networks-Devices.aspx
 country EG: DFS-ETSI
-	(2402 - 2482 @ 40), (20)
-	(5170 - 5250 @ 40), (20)
-	(5250 - 5330 @ 40), (20), DFS
+	(2402 - 2483.5 @ 40), (20)
+	(5150 - 5250 @ 80), (23), NO-OUTDOOR, AUTO-BW, wmmrule=ETSI
+	(5250 - 5330 @ 80), (20), NO-OUTDOOR, DFS, AUTO-BW, wmmrule=ETSI
 
 # ES as part of EU/CEPT accepted decisions 2005/513/EC (5GHz RLAN, EN 301 893)
 # and 2006/771/EC (amended by 2008/432/EC, Short-Range Devices, EN 300 440)
 #  EU decision 2005/513/EC: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02005D0513-20070213
 #  EU decision 2006/771/EC: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02008D0432-20080611
 # Harmonized CEPT countries (July 2019): https://www.ecodocdb.dk/download/25c41779-cd6e/Rec7003e.pdf
-# ES: https://avancedigital.gob.es/espectro/Paginas/cnaf.aspx
+# ES: https://avancedigital.mineco.gob.es/espectro/Paginas/cnaf.aspx
 country ES: DFS-ETSI
 	(2400 - 2483.5 @ 40), (100 mW)
 	(5150 - 5250 @ 80), (200 mW), NO-OUTDOOR, AUTO-BW, wmmrule=ETSI
@@ -576,6 +590,7 @@ country FR: DFS-ETSI
 # Harmonized CEPT countries (July 2019): https://www.ecodocdb.dk/download/25c41779-cd6e/Rec7003e.pdf
 # GB: https://www.ofcom.org.uk/__data/assets/pdf_file/0019/136009/Ofcom-Information-Sheet-5-GHz-RLANs.pdf
 # GB: https://www.ofcom.org.uk/__data/assets/pdf_file/0028/84970/ir-2030.pdf
+# GB: https://www.ofcom.org.uk/__data/assets/pdf_file/0013/126121/Statement_Implementing-Ofcoms-decision-on-the-57-71GHz-band.pdf
 country GB: DFS-ETSI
 	(2402 - 2482 @ 40), (36)
 	(5170 - 5835 @ 80), (36)
@@ -674,8 +689,8 @@ country HR: DFS-ETSI
 # Harmonized CEPT countries (July 2019): https://www.ecodocdb.dk/download/25c41779-cd6e/Rec7003e.pdf
 # HR: http://tablice.hakom.hr:8080/vis?lang=en
 	(2400 - 2483.5 @ 40), (100 mW)
-	(5150 - 5250 @ 80), (200 mW), NO-OUTDOOR, AUTO-BW, wmmrule=ETSI
-	(5250 - 5350 @ 80), (100 mW), NO-OUTDOOR, DFS, AUTO-BW, wmmrule=ETSI
+	(5150 - 5250 @ 80), (200 mW), AUTO-BW, wmmrule=ETSI
+	(5250 - 5350 @ 80), (200 mW), DFS, AUTO-BW, wmmrule=ETSI
 	(5470 - 5725 @ 160), (500 mW), DFS, wmmrule=ETSI
 	# short range devices (ETSI EN 300 440-1)
 	(5725 - 5875 @ 80), (25 mW)
@@ -708,9 +723,10 @@ country HU: DFS-ETSI
 	(57000 - 66000 @ 2160), (40)
 
 country ID: DFS-JP
-	# ref: http://www.postel.go.id/content/ID/regulasi/standardisasi/kepdir/bwa%205,8%20ghz.pdf
-	(2402 - 2482 @ 20), (20)
-	(5735 - 5815 @ 20), (23)
+	# ref: https://jdih.kominfo.go.id/produk_hukum/view/id/676/t/peraturan+menteri+komunikasi+dan+informatika+nomor+1+tahun+2019+tanggal+24+april+2019
+	(2400 - 2483.5 @ 40), (500 mW), NO-OUTDOOR
+	(5150 - 5350 @ 80), (200 mW), NO-OUTDOOR
+	(5725 - 5825 @ 80), (200 mW), NO-OUTDOOR
 
 # IE as part of EU/CEPT accepted decisions 2005/513/EC (5GHz RLAN, EN 301 893)
 # and 2006/771/EC (amended by 2008/432/EC, Short-Range Devices, EN 300 440)
@@ -851,13 +867,15 @@ country KY: DFS-FCC
 	(5735 - 5835 @ 80), (30)
 
 # Source:
-# http://mic.gov.kz/sites/default/files/pages/pravila_prisvoeniya_polos_chastot_no34.pdf
-# http://adilet.zan.kz/rus/docs/P000001379_
+# http://adilet.zan.kz/rus/docs/V1500010730
+# http://adilet.zan.kz/rus/docs/V1500010375
 country KZ: DFS-ETSI
-	(2402 - 2482 @ 40), (20)
-	(5150 - 5250 @ 80), (20), NO-OUTDOOR, AUTO-BW
+	(2400 - 2483.5 @ 40), (20)
+	(5150 - 5250 @ 80), (23), NO-OUTDOOR, AUTO-BW
 	(5250 - 5350 @ 80), (20), NO-OUTDOOR, DFS, AUTO-BW
-	(5470 - 5725 @ 80), (20), NO-OUTDOOR, DFS
+	(5470 - 5725 @ 160), (20), NO-OUTDOOR, DFS
+	(5725 - 5850 @ 80), (20), NO-OUTDOOR
+	(57000 - 66000 @ 2160), (40)
 
 country LB: DFS-FCC
 	(2402 - 2482 @ 40), (20)
@@ -1163,8 +1181,10 @@ country NO: DFS-ETSI
 	(5470 - 5725 @ 160), (500 mW), DFS, wmmrule=ETSI
 	# short range devices (ETSI EN 300 440-1)
 	(5725 - 5875 @ 80), (25 mW)
+	# WiFi 6E
+	(5945 - 6425 @ 160), (200 mW), NO-OUTDOOR, AUTO-BW, wmmrule=ETSI
 	# 60 GHz band channels 1-4 (ETSI EN 302 567)
-	(57000 - 66000 @ 2160), (40)
+	(57000 - 71000 @ 2160), (40)
 
 country NP: DFS-JP
 	(2402 - 2482 @ 40), (20)
@@ -1223,8 +1243,10 @@ country PH: DFS-FCC
 	(5735 - 5835 @ 80), (30)
 
 country PK: DFS-JP
+	# https://fab.gov.pk/type-approval/
+	# https://pta.gov.pk/media/Pakistan_Table_of_Frequency_Allocations.pdf
 	(2402 - 2482 @ 40), (20)
-	(5735 - 5835 @ 80), (30)
+	(5725 - 5875 @ 80), (30)
 
 # PL as part of EU/CEPT accepted decisions 2005/513/EC (5GHz RLAN, EN 301 893)
 # and 2006/771/EC (amended by 2008/432/EC, Short-Range Devices, EN 300 440)
@@ -1365,17 +1387,25 @@ country SE: DFS-ETSI
 	# 60 GHz band channels 1-4 (ETSI EN 302 567)
 	(57000 - 66000 @ 2160), (40)
 
-# Source
-# https://www.imda.gov.sg/~/media/imda/files/regulation%20licensing%20and%20consultations/ict%20standards/telecommunication%20standards/radio-comms/imdatssrd.pdf?la=en
-# page 12-14
-# The EIRP for 5250 – 5350 can be increased by 3dB if TPC is implemented.
+# https://www.imda.gov.sg/-/media/Imda/Files/Regulation-Licensing-and-Consultations/ICT-Standards/Telecommunication-Standards/Radio-Comms/IMDATSSRD.pdf
+# IMDA TS SRD, Issue 1 Revision 1, April 2019, subsequently "IMDA TS SRD"
+# 2400 - 2483.5 MHz: IMDA TS SRD, Table 1 (25); ANSI C63.10-2013 and FCC Part 15 Section 15.247 or EN 300 328
+# 5150 - 5350 MHz: IMDA TS SRD, Table 1 (29); FCC Part 15 Section 15.407 (1) 5.15-5.25 GHz (2) 5.25-5.35 GHz; EN 301 893
+# 5470 - 5725 MHz: IMDA TS SRD, Table 1 (30); FCC Part 15 Section 15.407 (2) 5.47-5.725 GHz; EN 301 893
+# 5725 - 5850 MHz: IMDA TS SRD, Table 1 (27); FCC Part 15 Section 15.247; FCC Part 15 Section 15.407 (3) 5.725-5.85 GHz
+# 57000 - 66000 MHz: IMDA TS SRD, Table 1 (31); ETSI EN 302 567
+# Note: 27dBm for 5470-5725MHz bands is 3dBm reduction per FCC Part 15 Section 15.407 (2) 5.47-5.725 GHz; EN 301 893 as referenced by IMDA TS SRD
+#  AU and BG regulatory domains use the same interpretation of cited FCC and ETSI standards
+# Note: The transmit power for 5250-5350MHz bands can be raised by 3dBm when TPC is implemented: IMDA TS SRD Table 1 (29)
+# Note: The transmit power for 5470-5725MHz bands can be raised by 3dBm when TPC is implemented: IMDA TS SRD Table 1 (30)
+
 country SG: DFS-FCC
 	(2400 - 2483.5 @ 40), (23)
 	(5150 - 5250 @ 80), (23), AUTO-BW
 	(5250 - 5350 @ 80), (20), DFS, AUTO-BW
-	# 5470 - 5725 is only allowed when TPC is implemented
-	# (5470 - 5725 @ 160), (30), DFS
+	(5470 - 5725 @ 160), (27), DFS
 	(5725 - 5850 @ 80), (30)
+	(57000 - 66000 @ 2160), (40)
 
 # SI as part of EU/CEPT accepted decisions 2005/513/EC (5GHz RLAN, EN 301 893)
 # and 2006/771/EC (amended by 2008/432/EC, Short-Range Devices, EN 300 440)
@@ -1513,13 +1543,12 @@ country TZ:
 	(2402 - 2482 @ 40), (20)
 	(5735 - 5835 @ 80), (30)
 
-# Source:
-# #914 / 06 Sep 2007: http://www.ucrf.gov.ua/uk/doc/nkrz/1196068874
-# #1174 / 23 Oct 2008: http://www.nkrz.gov.ua/uk/activities/ruling/1225269361
-# (appendix 8)
-# Listed 5GHz range is a lowest common denominator for all related
-# rules in the referenced laws. Such a range is used because of
-# disputable definitions there.
+# Source: https://zakon.rada.gov.ua/laws/show/z0201-15#n48
+# Although it is allowed to use up to 250 mW for some 5 GHz frequency ranges,
+# all of them are limited to 100 mW for IEEE 802.11n and IEEE 802.11ac.
+# 2.4 GHz band channels can be used outdoors when some requirements are met.
+# 5 GHz band channels must be used only indoors in some cases. They are neither
+# permitted nor denied outdoors in others.
 country UA: DFS-ETSI
 	(2402 - 2482 @ 40), (36)
 	(5170 - 5835 @ 80), (36)
@@ -1532,6 +1561,12 @@ country UG: DFS-FCC
 	(5490 - 5730 @ 160), (24), DFS
 	(5735 - 5835 @ 80), (30)
 
+# https://www.ecfr.gov/cgi-bin/text-idx?SID=eed706a2c49fd9271106c3228b0615f3&mc=true&node=pt47.1.15&rgn=div5
+# Title 47 Part 15 - Radio Frequency Devices, April 2, 2020
+# Channels 12 and 13 are not forbidden, but are not normally used with full
+# power in order to avoid any potential interference in the adjacent restricted
+# frequency band, 2,483.5–2,500 MHz which is subject to strict emission limits
+# set out in 47 CFR § 15.205. TODO: reenable and specify a safe TX power here.
 country US: DFS-FCC
 	(2402 - 2482 @ 40), (36)
 	(5170 - 5835 @ 80), (36)
